@@ -1,0 +1,11 @@
+{
+  "srcProject": ".",
+  "dstProject": ".",
+  "outDir": "types",
+  "outName": "api.d.ts",
+  "overwrite": true,
+  "explicitOutputs": true,
+  "parserOptions": {
+    "appRouterAlias": "AppRouter"
+  }
+}
