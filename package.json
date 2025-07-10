@@ -1,15 +1,16 @@
 {
-  "name": "@algora/xtrpc",
-  "version": "0.1.1",
+  "name": "@davidtjones02/xtrpc",
+  "version": "0.1.2",
   "description": "Export your tRPC router to massively improve language server performance and/or let your users consume your API from a typed SDK",
   "author": "Algora PBC. <info@algora.io> (https://algora.io)",
   "maintainers": [
-    "Zafer Cesur <zafer@algora.io>"
+    "Zafer Cesur <zafer@algora.io>",
+    "David Jones <https://github.com/davidtjones02>"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/algora-io/xtrpc.git"
+    "url": "https://github.com/davidtjones02/xtrpc.git"
   },
   "files": [
     "dist/**/*",
@@ -43,29 +44,29 @@
     "pub:release": "pnpm build && npm publish --access public"
   },
   "dependencies": {
-    "ts-morph": "^19.0.0",
-    "zod": "^3.21.4"
+    "ts-morph": "^26.0.0",
+    "zod": "^4.0.2"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.4.8",
-    "@changesets/cli": "^2.26.1",
-    "@ianvs/prettier-plugin-sort-imports": "^3.7.2",
-    "@total-typescript/ts-reset": "^0.3.7",
-    "@types/eslint": "^8.37.0",
-    "@types/node": "^18.16.0",
-    "@types/prettier": "^2.7.2",
-    "@typescript-eslint/eslint-plugin": "6.0.0",
-    "@typescript-eslint/parser": "6.0.0",
-    "eslint": "^8.40.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-config-turbo": "^0.0.9",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-isaacscript": "^2.6.7",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^2.8.8",
-    "tsup": "^6.7.0",
-    "typescript": "^5.1.3"
+    "@changesets/changelog-github": "^0.5.1",
+    "@changesets/cli": "^2.29.5",
+    "@ianvs/prettier-plugin-sort-imports": "^4.5.1",
+    "@total-typescript/ts-reset": "^0.6.1",
+    "@types/eslint": "^9.6.1",
+    "@types/node": "^24.0.12",
+    "@types/prettier": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "8.36.0",
+    "@typescript-eslint/parser": "8.36.0",
+    "eslint": "^9.30.1",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-config-turbo": "^2.5.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-isaacscript": "^4.0.0",
+    "eslint-plugin-prettier": "^5.5.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
   }
 }

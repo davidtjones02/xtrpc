@@ -1,8 +1,8 @@
 import { ts, type Node } from "ts-morph";
 
-export const isContext = (node: Node) =>
+export const isBuilderContext = (node: Node) =>
   node.getKind() === ts.SyntaxKind.PropertyAccessExpression &&
-  node.getText().endsWith(".context");
+  node.getText() === "initTRPC.context";
 
 export const isMiddleware = (node: Node) =>
   node.getKind() === ts.SyntaxKind.PropertyAccessExpression &&

@@ -3,7 +3,7 @@ import path from "path";
 import { Project } from "ts-morph";
 import { findNodeOrThrow } from "~/ast";
 import { readConfig } from "~/config";
-import { isAppRouterAlias, isContext, isMiddleware, isRouter } from "~/guard";
+import { isAppRouterAlias, isBuilderContext, isMiddleware, isRouter } from "~/guard";
 import { getAllTransformers, pruneRouter, redefine } from "~/transformer";
 
 const main = async () => {
@@ -17,7 +17,7 @@ const main = async () => {
   const srcFiles = srcProj.getSourceFiles();
 
   const transformers = getAllTransformers(srcFiles, [
-    [isContext, redefine("any")],
+    [isBuilderContext, redefine("any")],
     [isMiddleware, redefine("t.middleware(({ ctx, next }) => next({ ctx }))")],
     [isRouter, pruneRouter(cfg.include, cfg.explicitOutputs)],
   ]);

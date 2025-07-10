@@ -8,7 +8,7 @@ const Config = z.object({
   outName: z.string().optional().default("api.d.ts"),
   overwrite: z.boolean().optional().default(false),
   explicitOutputs: z.boolean().optional().default(false),
-  include: z.record(z.string().array()).default({}),
+  include: z.record(z.string(), z.array(z.string())).default({}),
   parserOptions: z
     .object({ appRouterAlias: z.string().optional().default("AppRouter") })
     .optional()
@@ -32,7 +32,9 @@ const toJson = (s: string, ctx: z.RefinementCtx) => {
   }
 };
 
-export const readConfig = async (path: string) =>
+export type ConfigType = z.infer<typeof Config>;
+
+export const readConfig = async (path: string): Promise<ConfigType> =>
   z
     .string()
     .optional()
